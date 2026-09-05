@@ -58,6 +58,9 @@ To define an autonomous custom element, you should omit the `options` parameter.
 
 To define a customized built-in element, you must pass the `options` parameter with its `extends` property set to the name of the built-in element that you are extending, and this must correspond to the interface that your custom element class definition inherits from. For example, to customize the {{htmlelement("p")}} element, you must pass `{extends: "p"}` to `define()`, and the class definition for your element must inherit from {{domxref("HTMLParagraphElement")}}.
 
+> [!NOTE]
+> If the `constructor` defines an {{domxref("HTMLElement/attributeChangedCallback", "attributeChangedCallback()")}}, `define()` reads the constructor's static {{domxref("HTMLElement/observedAttributes", "observedAttributes")}} property (per [step 14.5 of the spec's `define()` algorithm](https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-define)). This happens once, at definition time, so `observedAttributes` must be defined before `define()` is called.
+
 ### Valid custom element names
 
 Custom element names must:
