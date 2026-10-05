@@ -57,7 +57,7 @@ This element also accepts the [global attributes](/en-US/docs/Web/HTML/Reference
 
 Typically, ordered list items display with a preceding [marker](/en-US/docs/Web/CSS/Reference/Selectors/::marker), such as a number or letter.
 
-The `<ol>` and {{HTMLElement("ul")}} (or the synonym {{HTMLElement("menu")}}) elements may nest as deeply as desired, alternating between `<ol>`, `<ul>` (or `<menu>`) as needed.
+The `<ol>` and {{HTMLElement("ul")}} (or the synonym {{HTMLElement("menu")}}) elements may nest as deeply as desired, alternating between `<ol>`, `<ul>` (or `<menu>`) as needed. A nested list must be placed inside an {{HTMLElement("li")}} element of the parent list, not directly inside the parent list element, as shown in [Nesting lists](#nesting_lists).
 
 The `<ol>` and {{HTMLElement("ul")}} elements both represent a list of items. The difference is with the `<ol>` element, the order is meaningful. For example:
 
